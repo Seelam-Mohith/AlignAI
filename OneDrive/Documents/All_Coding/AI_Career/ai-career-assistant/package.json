@@ -1,10 +1,11 @@
 {
   "name": "ai-career-assistant",
   "version": "1.0.0",
-  "description": "AI Career Assistant is a full-stack MERN + Python microservice application that provides three AI-powered career development tools:",
+  "description": "AI Career Assistant - Full-stack MERN + Python application",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\" \"python ml-service/main.py\"",
+    "start:prod": "node server/server.js & python ml-service/main.py & npm start --prefix client",
     "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
     "build": "npm run build --prefix client",
     "install-all": "npm install && npm install --prefix client && npm install --prefix server",
