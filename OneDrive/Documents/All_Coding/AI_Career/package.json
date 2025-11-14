@@ -1,0 +1,14 @@
+{
+  "name": "alignai-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install": "cd ai-career-assistant && npm install && npm install --prefix client && npm install --prefix server && npm run build --prefix client && pip install -r ml-service/requirements.txt",
+    "build": "cd ai-career-assistant && npm run build",
+    "start": "cd ai-career-assistant && npm run start",
+    "start:prod": "cd ai-career-assistant && npm run start:prod"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
