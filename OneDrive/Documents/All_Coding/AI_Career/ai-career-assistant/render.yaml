@@ -3,7 +3,7 @@ services:
     name: alignai-fullstack
     runtime: node
     plan: free
-    buildCommand: npm install && npm install --prefix client && npm install --prefix server && npm run build --prefix client
+    buildCommand: npm install && npm install --prefix client && npm install --prefix server && npm run build --prefix client && pip install -r ml-service/requirements.txt
     startCommand: npm run start:prod
     envVars:
       - key: NODE_ENV
