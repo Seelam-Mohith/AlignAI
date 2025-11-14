@@ -1,0 +1,10 @@
+{
+  "name": "alignai-src-shim",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install": "cd ../../ai-career-assistant && npm install && npm install --prefix client && npm install --prefix server && npm run build --prefix client && pip install -r ml-service/requirements.txt",
+    "start": "sh ../../ai-career-assistant/start.sh",
+    "start:prod": "sh ../../ai-career-assistant/start.sh"
+  }
+}
