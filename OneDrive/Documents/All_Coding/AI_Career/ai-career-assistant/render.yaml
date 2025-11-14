@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ai-career-ml-service
+    runtime: python
+    plan: free
+    buildCommand: pip install -r ml-service/requirements.txt
+    startCommand: "cd ml-service && gunicorn main:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9
